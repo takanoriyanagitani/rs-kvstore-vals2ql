@@ -1,0 +1,40 @@
+[package]
+name = "rs-kvstore-vals2ql"
+version = "0.1.0"
+edition = "2024"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "forbid"
+
+[dependencies.async-trait]
+version = "0.1"
+default-features = false
+features = [
+]
+
+[dependencies.deadpool-redis]
+version = "0.22"
+default-features = false
+features = [
+	"rt_tokio_1",
+]
+
+[dependencies.async-graphql]
+version = "7.0"
+default-features = false
+features = [
+	"dataloader",
+]
+
+[dependencies.tokio]
+version = "1"
+default-features = false
+features = [
+	"rt-multi-thread",
+]
+
+[features]
+boxed-trait = []
